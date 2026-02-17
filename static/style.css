@@ -1,0 +1,6 @@
+.navbar {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+}
