@@ -1,11 +1,36 @@
-.navbar {
+.body {
     background: white;
+}
+
+.navbar {
+    background: rgb(221, 221, 221);
     display: flex;
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 
 .logo {
-    height: 150px;
+    height: 50px;
+    width: auto;
+}
+
+.carticon {
+    height: 50px;
+    width: auto;
+}
+
+.products-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.products-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.productimg {
+    height: 200px;
     width: auto;
 }
