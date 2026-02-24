@@ -1,5 +1,7 @@
-.body {
+body {
     background: white;
+    margin: 0;
+
 }
 
 .navbar {
@@ -11,13 +13,58 @@
 }
 
 .logo {
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 160px;
+    margin-right: 5px;
     height: 50px;
+    width: auto;
+    background-image: linear-gradient(to top right, #4400ff, #0051ff, #0077ff);
+}
+
+.sitetitle {
+    margin-right: 1125px;
+}
+
+.icon {
+    height: 30px;
     width: auto;
 }
 
-.carticon {
-    height: 50px;
-    width: auto;
+.shopbutton {
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.cartbutton {
+    margin-left: 5px;
+}
+
+.title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 1px;
+    border-radius: 25px;
+    height: 150px;
+    width: 1580px;
+    margin-left: 150px;
+    background-image: linear-gradient(to top right, #4400ff, #0051ff, #0077ff);
+    color: rgb(238, 238, 238);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titleinfo {
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+.filters {
+    margin-left: 155px;
+}
+
+.productinfo {
+    margin-left: 15px;
 }
 
 .products-1 {
@@ -44,7 +91,7 @@
     margin-right: 30px;
     margin-bottom: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
@@ -54,7 +101,7 @@
 .product_2 {
     margin: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
@@ -64,7 +111,7 @@
 .product_3 {
     margin: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
@@ -74,7 +121,7 @@
 .product_4 {
     margin: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
@@ -87,7 +134,7 @@
     margin-right: 30px;
     margin-bottom: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
@@ -97,7 +144,7 @@
 .product_6 {
     margin: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
@@ -107,7 +154,7 @@
 .product_7 {
     margin: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
@@ -117,7 +164,7 @@
 .product_8 {
     margin: 30px;
     width: 350px;
-    height:600px;
+    height:570px;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(243, 243, 243);
     border-radius: 20px;
