@@ -69,102 +69,24 @@ body {
     margin-left: 15px;
 }
 
-.products-1 {
-    display: flex;
-    flex-direction: row;
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
 }
 
-.products-2 {
-    display: flex;
-    flex-direction: row;
-}
-
-.productimg {
+.product img {
     height: 400px;
     width: 350px;
-    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    object-fit: cover;
 }
-
-.product_1 {
-    margin-left: 150px;
+.product {
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 30px;
-    margin-right: 30px;
     margin-bottom: 30px;
-    width: 350px;
-    height:570px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(243, 243, 243);
-    border-radius: 20px;
-    outline: 2px solid rgb(215, 215, 215);
-}
-
-.product_2 {
-    margin: 30px;
-    width: 350px;
-    height:570px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(243, 243, 243);
-    border-radius: 20px;
-    outline: 2px solid rgb(215, 215, 215);
-}
-
-.product_3 {
-    margin: 30px;
-    width: 350px;
-    height:570px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(243, 243, 243);
-    border-radius: 20px;
-    outline: 2px solid rgb(215, 215, 215);
-}
-
-.product_4 {
-    margin: 30px;
-    width: 350px;
-    height:570px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(243, 243, 243);
-    border-radius: 20px;
-    outline: 2px solid rgb(215, 215, 215);
-}
-
-.product_5 {
-    margin-left: 150px;
-    margin-top: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    width: 350px;
-    height:570px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(243, 243, 243);
-    border-radius: 20px;
-    outline: 2px solid rgb(215, 215, 215);
-}
-
-.product_6 {
-    margin: 30px;
-    width: 350px;
-    height:570px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(243, 243, 243);
-    border-radius: 20px;
-    outline: 2px solid rgb(215, 215, 215);
-}
-
-.product_7 {
-    margin: 30px;
-    width: 350px;
-    height:570px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(243, 243, 243);
-    border-radius: 20px;
-    outline: 2px solid rgb(215, 215, 215);
-}
-
-.product_8 {
-    margin: 30px;
     width: 350px;
     height:570px;
     font-family: Arial, Helvetica, sans-serif;

@@ -28,56 +28,15 @@
         <button type="button">Accesories</button>
         <button type="button">Training</button>
     </div>
-    <div class="products-1">
-        <div class="product_1">
-            <img class="productimg" src="../static/images/alex-F-p5j1eRe5Y-unsplash.jpg" alt="">
-            <h3 class="productinfo">Professional Match Ball</h1>
-            <p class="productinfo">Professional level match ball on par with the pros.</p>
-            <h1 class="productinfo">$80.00</h1>
-        </div>
-        <div class="product_2">
-            <img class="productimg" src="../static/images/otabek-xatipov-rx3Fpnl6sw4-unsplash.jpg" alt="">
-            <h3 class="productinfo">Pro Performance Cleats</h1>
-            <p class="productinfo">Top of the line football cleats worn by the profsionals.</p>
-            <h1 class="productinfo">$100.00</h1>
-        </div>
-        <div class="product_3">
-            <img class="productimg" src="../static/images/nelson-ndongala-Z4RYz52ljts-unsplash.jpg" alt="">
-            <h3 class="productinfo">Premium Team Jersey</h1>
-            <p class="productinfo">Football tees straight from the worlds favourite teams.</p>
-            <h1 class="productinfo">$90.00</h1>
-        </div>
-        <div class="product_4">
-            <img class="productimg" src="../static/images/soonita-omar-Wtx4cku85Pg-unsplash.jpg" alt="">
-            <h3 class="productinfo">Goalkeeper Gloves</h1>
-            <p class="productinfo">Professional level goalkeeper gloves used by the worlds best.</p>
-            <h1 class="productinfo">$50.00</h1>
-        </div>
-    </div>
-    <div class="products-2">
-        <div class="product_5">
-            <img class="productimg" src="../static/images/phillipkofler-soccer-1350774_1920.jpg" alt="">
-            <h3 class="productinfo">Protective Shin Guards</h1>
-            <p class="productinfo">Industrial level shin guards to keep you safe when playing.</p>
-            <h1 class="productinfo">$30.00</h1>
-        </div>
-        <div class="product_6">
-            <img class="productimg" src="../static/images/alexandraloves-cones-704219_1920.jpg" alt="">
-            <h3 class="productinfo">Training Equipment Set</h1>
-            <p class="productinfo">Professional training equipment to help you level up your game.</p>
-            <h1 class="productinfo">$50.00</h1>
-        </div>
-        <div class="product_7">
-            <img class="productimg" src="../static/images/planet_fox-ball-8048205_1920.jpg" alt="">
-            <h3 class="productinfo">Elite Training Ball</h1>
-            <p class="productinfo">Training ball that can get the job done at an amazing price.</p>
-            <h1 class="productinfo">$40.00</h1>
-        </div>
-        <div class="product_8">
-            <img class="productimg" src="../static/images/planet_fox-indoor-tournament-4723675_1920.jpg" alt="">
-            <h3 class="productinfo">Indoor Court Shoes</h1>
-            <p class="productinfo">Professional indoor court shoes for when the weather is too much.</p>
-            <h1 class="productinfo">$70.00</h1>
+    <div class="products">
+        {% for item in PRODUCTS %}
+            <div class="product">
+                <img class="productimg" src="{{url_for('static', filename='images/' + item.image)}}" alt="">
+                <h3 class="productinfo">{{item.name}}</h1>
+                <p class="productinfo">{{item.info}}</p>
+                <h1 class="productinfo">${{item.price}}.00</h1>
+            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="footer">
