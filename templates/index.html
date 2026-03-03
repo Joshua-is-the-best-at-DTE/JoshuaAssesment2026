@@ -11,9 +11,9 @@
         <img class="logo" src="../static/images/ball.png">
         <h1 class="sitetitle">FootballShop</h1>
         <img class="icon" src="../static/images/bag.png">
-        <a class="shopbutton" href="index.html">Shop</a>
+        <a class="shopbutton" href="{{ url_for('home') }}">Shop</a>
         <img class="icon" src="../static/images/online-shopping.png">
-        <a class="cartbutton" href="cart.html">Cart</a>
+        <a class="cartbutton" href="{{ url_for('cart') }}">Cart</a>
     </div>
     <div class="title">
         <h1 class="titleinfo">Premium Football Equipment</h1>
@@ -42,12 +42,22 @@
     <div class="footer">
         <div class="footer1">
             <img class="footerlogo" src="../static/images/ball.png">
-            <h1>Football Shop</h1>
+            <h1>FootballShop</h1>
         </div>
+        <div class="verticalline"></div>
         <div class="footer2">
-            <a href="index.html">Shop</a>
-            <a href="cart.html">Cart</a>
+            <a class="footbut" href="{{ url_for('home') }}">
+                <button>
+                    Shop
+                </button>
+            </a>
+            <a class="footbut" href="{{ url_for('cart') }}">
+                <button>
+                    Cart
+                </button>
+            </a>
         </div>
+        <div class="verticalline"></div>
         <div class="footer3">
             <h2>Joshua Arada 2026</h2>
             <h2>DTE Assesment</h2>

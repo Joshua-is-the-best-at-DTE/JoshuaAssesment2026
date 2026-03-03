@@ -25,5 +25,18 @@ def home():
 
     return render_template("index.html", PRODUCTS = products)
 
+@app.route("/cart")
+def cart():
+    products = []
+    for item in get_all_products():
+        products.append({
+            "name": item[0],
+            "image": item[3],
+            "info": item[5],
+            "price": item[4]
+        })
+
+    return render_template("cart.html", PRODUCTS = products)
+
 if __name__ == "__main__":
     app.run(debug=True)
