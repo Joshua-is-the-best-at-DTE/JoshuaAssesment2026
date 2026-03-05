@@ -153,3 +153,19 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.propage {
+    background: rgb(221, 221, 221);
+    margin-left: 150px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.proimg {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+}

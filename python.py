@@ -38,5 +38,13 @@ def cart():
 
     return render_template("cart.html", PRODUCTS = products)
 
+@app.route("/pro/<int:ID>")
+def pro(ID):
+    with sqlite3.connect(database) as db:
+        cursor = db.cursor()
+        cursor.execute("SELECT Product_name, Image, Prices, Product_info FROM Products WHERE Product_ID = ?", (ID,))
+        results = cursor.fetchone()
+    return render_template("productpage.html", PRODUCT = results)
+
 if __name__ == "__main__":
     app.run(debug=True)

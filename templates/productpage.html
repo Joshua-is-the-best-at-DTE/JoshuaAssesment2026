@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PRODUCT[0]}}</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <img class="logo" src="../static/images/ball.png">
+        <h1 class="sitetitle">FootballShop</h1>
+        <img class="icon" src="../static/images/bag.png">
+        <a class="shopbutton" href="{{ url_for('home') }}">Shop</a>
+        <img class="icon" src="../static/images/online-shopping.png">
+        <a class="cartbutton" href="{{ url_for('cart') }}">Cart</a>
+    </div>
+    <div class="propage">
+        <div>
+            <img class="proimg" src="{{url_for('static', filename='images/' + PRODUCT[1])}}">
+        </div>
+        <div>
+            <h1>{{PRODUCT[0]}}</h1>
+            <p>{{PRODUCT[3]}}</p>
+            <a class="footbut" href="{{ url_for('cart') }}">
+                <button>
+                    Add To Cart
+                </button>
+        </div>
+    </div>
+</body>
+</html>
