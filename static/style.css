@@ -155,11 +155,21 @@ body {
 }
 
 .propage {
+    width: 1580px;
+    height: 600px;
+    border-radius: 25px;
     background: rgb(221, 221, 221);
     margin-left: 150px;
     margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
+}
+
+.propage2 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 50px;
+    padding-top: 30px
 }
 
 .proimg {

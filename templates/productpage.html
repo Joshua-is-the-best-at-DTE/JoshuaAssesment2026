@@ -19,13 +19,39 @@
         <div>
             <img class="proimg" src="{{url_for('static', filename='images/' + PRODUCT[1])}}">
         </div>
-        <div>
-            <h1>{{PRODUCT[0]}}</h1>
-            <p>{{PRODUCT[3]}}</p>
+        <div class="propage2">
+            <h1 class="protit">{{PRODUCT[0]}}</h1>
+            <p class="proinf">{{PRODUCT[3]}}</p>
             <a class="footbut" href="{{ url_for('cart') }}">
                 <button>
                     Add To Cart
                 </button>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <img class="footerlogo" src="../static/images/ball.png">
+            <h1>FootballShop</h1>
+        </div>
+        <div class="verticalline"></div>
+        <div class="footer2">
+            <a class="footbut" href="{{ url_for('home') }}">
+                <button>
+                    Shop
+                </button>
+            </a>
+            <a class="footbut" href="{{ url_for('cart') }}">
+                <button>
+                    Cart
+                </button>
+            </a>
+        </div>
+        <div class="verticalline"></div>
+        <div class="footer3">
+            <h2>Joshua Arada 2026</h2>
+            <h2>DTE Assesment</h2>
+            <h2>21005@rosmini.school.nz</h2>
         </div>
     </div>
 </body>
