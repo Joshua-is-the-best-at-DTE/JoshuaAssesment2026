@@ -20,10 +20,14 @@
             <img class="proimg" src="{{url_for('static', filename='images/' + PRODUCT[1])}}">
         </div>
         <div class="propage2">
-            <h1 class="protit">{{PRODUCT[0]}}</h1>
+            <div class="propagetit">
+                <h1 class="protit">{{PRODUCT[0]}}</h1>
+                <h1 class="propri">${{PRODUCT[2]}}.00</h1>
+            </div>
             <p class="proinf">{{PRODUCT[3]}}</p>
-            <a class="footbut" href="{{ url_for('cart') }}">
-                <button>
+            <p>Disclaimer: All of our products are high quality and reliable. However, after you buy our product, you will never receive it. Do not pursue legal against our company because we have made it clear the you will not recieve any item you pay for. We highly advise you not to buy any of our products for your own financial well being. Thanks for understanding, the FootballShop team :)</p>
+            <a class="footbut2" href="{{ url_for('cart') }}">
+                <button class="footbut2">
                     Add To Cart
                 </button>
             </a>
