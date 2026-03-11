@@ -38,6 +38,19 @@ def cart():
 
     return render_template("cart.html", PRODUCTS = products)
 
+@app.route("/pro2")
+def pro2():
+    products = []
+    for item in get_all_products():
+        products.append({
+            "name": item[0],
+            "image": item[3],
+            "info": item[5],
+            "price": item[4]
+        })
+
+    return render_template("productpage.html", PRODUCTS = products)
+
 @app.route("/pro/<int:ID>")
 def pro(ID):
     with sqlite3.connect(database) as db:
