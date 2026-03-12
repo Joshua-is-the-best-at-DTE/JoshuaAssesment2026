@@ -18,6 +18,7 @@ def home():
     for item in get_all_products():
         products.append({
             "name": item[0],
+            "id": item[2],
             "image": item[3],
             "info": item[5],
             "price": item[4]

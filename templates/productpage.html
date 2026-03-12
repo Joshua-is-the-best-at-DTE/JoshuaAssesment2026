@@ -8,8 +8,12 @@
 </head>
 <body>
     <div class="navbar"> <!-- The navbar, it is the same across all pages -->
-        <img class="logo" src="../static/images/ball.png">
-        <h1 class="sitetitle">FootballShop</h1>
+        <div class="atitle">
+            <a href="{{ url_for('home') }}">
+                <img class="logo" src="../static/images/ball.png">
+                <h1 class="sitetitle">FootballShop</h1>
+            </a>
+        </div>
         <img class="icon" src="../static/images/bag.png">
         <a class="shopbutton" href="{{ url_for('home') }}">Shop</a> <!-- Link to the home page with all the products -->
         <img class="icon" src="../static/images/online-shopping.png">

@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FootballShopCart</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    
+    <div class="navbar"> <!-- The navbar, it is the same across all pages -->
+        <div class="atitle">
+            <a href="{{ url_for('home') }}">
+                <img class="logo" src="../static/images/ball.png">
+                <h1 class="sitetitle">FootballShop</h1>
+            </a>
+        </div>
+        <img class="icon" src="../static/images/bag.png">
+        <a class="shopbutton" href="{{ url_for('home') }}">Shop</a> <!-- Link to the home page with all the products -->
+        <img class="icon" src="../static/images/online-shopping.png">
+        <a class="cartbutton" href="{{ url_for('cart') }}">Cart</a> <!-- Link to the cart page -->
+    </div>
+    <div class="carttitle">
+        <h1>Shopping Cart</h1>
+        <img class="carticon" src="../static/images/online-shopping.png">
+    </div>
+
+
+
+    <div class="footer"> <!-- footer, it is the same across all pages -->
+        <div class="footer1">
+            <img class="footerlogo" src="../static/images/ball.png">
+            <h1>FootballShop</h1>
+        </div>
+        <div class="verticalline"></div> <!-- line used to divide sections of the footer -->
+        <div class="footer2">
+            <a href="{{ url_for('home') }}"> <!-- button that takes user to home page with all the products -->
+                <button class="footbut">
+                    Shop
+                </button>
+            </a>
+            <a href="{{ url_for('cart') }}"> <!-- button that takes user to cart page -->
+                <button class="footbut">
+                    Cart
+                </button>
+            </a>
+        </div>
+        <div class="verticalline"></div>
+        <div class="footer3"> <!-- Just information about me because I didn't know what else to put here -->
+            <h2>Joshua Arada 2026</h2>
+            <h2>DTE Assesment</h2>
+            <h2>21005@rosmini.school.nz</h2>
+        </div>
+    </div>
 </body>
 </html>

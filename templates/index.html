@@ -8,8 +8,12 @@
 </head>
 <body>
     <div class="navbar"> <!-- The navbar, it is the same across all pages -->
-        <img class="logo" src="../static/images/ball.png">
-        <h1 class="sitetitle">FootballShop</h1>
+        <div class="atitle">
+            <a href="{{ url_for('home') }}">
+                <img class="logo" src="../static/images/ball.png">
+                <h1 class="sitetitle">FootballShop</h1>
+            </a>
+        </div>
         <img class="icon" src="../static/images/bag.png">
         <a class="shopbutton" href="{{ url_for('home') }}">Shop</a> <!-- Link to the home page with all the products -->
         <img class="icon" src="../static/images/online-shopping.png">
@@ -31,10 +35,12 @@
     <div class="products">
         {% for item in PRODUCTS %} <!-- A loop that contueoslly puts every product and its name, img, price, and info, from the python on to the website. (The python gets the products from my database) -->
             <div class="product">
-                <img class="productimg" src="{{url_for('static', filename='images/' + item.image)}}" alt="">
-                <h3 class="productinfo">{{item.name}}</h1>
-                <p class="productinfo">{{item.info}}</p>
-                <h1 class="productinfo">${{item.price}}.00</h1>
+                <a href="{{ url_for('pro', ID=item.id) }}">
+                    <img class="productimg" src="{{url_for('static', filename='images/' + item.image)}}" alt="">
+                    <h3 class="productinfo">{{item.name}}</h1>
+                    <p class="productinfo">{{item.info}}</p>
+                    <h1 class="productinfo">${{item.price}}.00</h1>
+                </a>
             </div>
             {% endfor %}
         </div>
