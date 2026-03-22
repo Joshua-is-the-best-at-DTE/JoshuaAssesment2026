@@ -24,13 +24,13 @@
         <p class="titleinfo"> <!-- I used ai to write this paragraph introducing the website -->
             Football Shop is your direct line to the beautiful game, offering a curated selection of elite boots, authentic kits, and pro-grade gear. Built for players and fans alike, we combine top-tier quality with fast delivery to keep you ahead of the competition. From the local park to the big stadium, if it’s football, it’s here.</p>
     </div>
-    <div class="filters"> <!-- Buttons that can filter out productsby keywords -->
-        <button type="button">All</button>
-        <button type="button">Balls</button>
-        <button type="button">Footwear</button>
-        <button type="button">Aparel</button>
-        <button type="button">Accesories</button>
-        <button type="button">Training</button>
+    <div class="filters">
+        <a href="{{ url_for('home', category='all') }}"><button type="button">All</button></a>
+        <a href="{{ url_for('home', category='ball') }}"><button type="button">Balls</button></a>
+        <a href="{{ url_for('home', category='footwear') }}"><button type="button">Footwear</button></a>
+        <a href="{{ url_for('home', category='aparel') }}"><button type="button">Aparel</button></a>
+        <a href="{{ url_for('home', category='accesories') }}"><button type="button">Accessories</button></a>
+        <a href="{{ url_for('home', category='training') }}"><button type="button">Training</button></a>
     </div>
     <div class="products">
         {% for item in PRODUCTS %} <!-- A loop that contueoslly puts every product and its name, img, price, and info, from the python on to the website. (The python gets the products from my database) -->

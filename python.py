@@ -3,6 +3,7 @@ import sqlite3
 
 database = 'Databases/products.db'
 app = Flask(__name__)
+app.secret_key = 'your_secret_key_here'
 
 def get_all_products():
     with sqlite3.connect(database) as db:
@@ -23,6 +24,25 @@ def home():
             "info": item[5],
             "price": item[4]
         })
+        # 1. Get the category from the URL (e.g., ?category=aparel)
+    selected_cat = request.args.get('category', 'all').lower()
+    
+    products = []
+    # 2. Loop through all products from your DB
+    for item in get_all_products():
+        # Based on your image: 
+        # item[0]=Name, item[1]=Keywords, item[2]=ID, item[3]=Image, item[4]=Price, item[5]=Info
+        db_keywords = item[1].lower() if item[1] else ""
+
+        # 3. Logic: Show if 'all' is picked OR if the category is IN the keywords string
+        if selected_cat == 'all' or selected_cat in db_keywords:
+            products.append({
+                "name": item[0],
+                "id": item[2],
+                "image": item[3],
+                "info": item[5],
+                "price": item[4]
+            })
 
     return render_template("index.html", PRODUCTS = products)
 
