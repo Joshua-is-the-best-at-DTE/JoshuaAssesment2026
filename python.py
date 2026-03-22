@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
 import sqlite3
 
 database = 'Databases/products.db'
@@ -62,3 +62,4 @@ def pro(ID):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
