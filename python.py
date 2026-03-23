@@ -24,17 +24,11 @@ def home():
             "info": item[5],
             "price": item[4]
         })
-        # 1. Get the category from the URL (e.g., ?category=aparel)
     selected_cat = request.args.get('category', 'all').lower()
     
     products = []
-    # 2. Loop through all products from your DB
     for item in get_all_products():
-        # Based on your image: 
-        # item[0]=Name, item[1]=Keywords, item[2]=ID, item[3]=Image, item[4]=Price, item[5]=Info
         db_keywords = item[1].lower() if item[1] else ""
-
-        # 3. Logic: Show if 'all' is picked OR if the category is IN the keywords string
         if selected_cat == 'all' or selected_cat in db_keywords:
             products.append({
                 "name": item[0],
