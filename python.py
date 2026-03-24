@@ -40,18 +40,45 @@ def home():
 
     return render_template("index.html", PRODUCTS = products)
 
+@app.route("/add_to_cart/<int:ID>")
+def add_to_cart(ID):
+    cart = session.get('cart', [])
+    cart.append(ID)
+    session['cart'] = cart
+    return redirect(request.referrer or url_for('home'))
+
+@app.route("/remove_from_cart/<int:ID>")
+def remove_from_cart(ID):
+    cart = session.get('cart', [])
+    if ID in cart:
+        cart.remove(ID)
+        session['cart'] = cart
+        session.modified = True
+    return redirect(url_for('cart'))
+
 @app.route("/cart")
 def cart():
-    products = []
-    for item in get_all_products():
-        products.append({
-            "name": item[0],
-            "image": item[3],
-            "info": item[5],
-            "price": item[4]
-        })
+    cart_ids = session.get('cart', [])
+    products_in_cart = []
+    
+    if cart_ids:
+        with sqlite3.connect(database) as db:
+            cursor = db.cursor()
+            placeholders = ','.join(['?'] * len(cart_ids))
+            query = f"SELECT Product_name, Image, Prices, Product_info, Product_ID FROM Products WHERE Product_ID IN ({placeholders})"
+            cursor.execute(query, cart_ids)
+            results = cursor.fetchall()
+            
+            for item in results:
+                products_in_cart.append({
+                    "name": item[0],
+                    "image": item[1],
+                    "price": item[2],
+                    "info": item[3],
+                    "id": item[4]
+                })
 
-    return render_template("cart.html", PRODUCTS = products)
+    return render_template("cart.html", PRODUCTS=products_in_cart)
 
 @app.route("/pro2")
 def pro2():
@@ -70,9 +97,9 @@ def pro2():
 def pro(ID):
     with sqlite3.connect(database) as db:
         cursor = db.cursor()
-        cursor.execute("SELECT Product_name, Image, Prices, Product_info FROM Products WHERE Product_ID = ?", (ID,))
+        cursor.execute("SELECT Product_name, Image, Prices, Product_info, Product_ID FROM Products WHERE Product_ID = ?", (ID,))
         results = cursor.fetchone()
-    return render_template("productpage.html", PRODUCT = results)
+    return render_template("productpage.html", PRODUCT=results)
 
 if __name__ == "__main__":
     app.run(debug=True)

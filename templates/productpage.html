@@ -31,10 +31,8 @@
             <p class="proinf">{{PRODUCT[3]}}</p> <!-- product information -->
             <p>Disclaimer: All of our products are high quality and reliable. However, after you buy our product, you will never receive it. Do not pursue legal against our company because we have made it clear the you will not recieve any item you pay for. We highly advise you not to buy any of our products for your own financial well being. Thanks for understanding, the FootballShop team :)</p>
             <p>Free Shipping!</p>
-            <a href="{{ url_for('cart') }}"> <!-- The add product to cart button -->
-                <button class="footbut2">
-                    Add To Cart
-                </button>
+            <a href="{{ url_for('add_to_cart', ID=PRODUCT[4]) }}"> <!-- Ensure ID is the correct index from your query -->
+                <button class="footbut2">Add To Cart</button>
             </a>
             <a href="{{ url_for('cart') }}"> <!-- The add product to cart button -->
                 <button class="gotocart">
