@@ -5,6 +5,7 @@ body {
 }
 
 .navbar {
+    width:auto;
     background: rgb(221, 221, 221);
     display: flex;
     flex-direction: row;
