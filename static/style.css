@@ -71,10 +71,6 @@ body {
     margin-right: 25px;
 }
 
-.filters {
-    margin-left: 155px;
-}
-
 .productinfo {
     margin-left: 15px;
 }
@@ -353,5 +349,83 @@ body {
 }
 
 .empty {
-    margin-left: 350px;
+    margin-top: 100px;
+    margin-left: 550px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.eb {
+    margin-left: 30px;
+}
+
+.cin {
+    margin-right: 7px;
+}
+
+.filbut {
+    margin: 0;
+    background-color: rgb(245, 245, 245);
+    border:#862020;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    font-size: 20px;
+    align-items: center;
+    height: 40px;
+}
+
+.filbut:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.filbut1 {
+    margin-left: 10px;
+    background-color: rgb(245, 245, 245);
+    border:#862020;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    font-size: 20px;
+    height: 40px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.filbut1:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.filbut2 {
+    margin: 0;
+    background-color: rgb(245, 245, 245);
+    border:#862020;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    font-size: 20px;
+    align-items: center;
+    height: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.filbut2:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.filters {
+    margin-left: 155px;
+    background-color: rgb(245, 245, 245);
+    height: 40px;
+    border-radius: 25px;
+    width: 601px;
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.filimg {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
 }

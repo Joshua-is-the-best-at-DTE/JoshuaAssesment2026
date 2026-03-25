@@ -31,8 +31,8 @@
                     <img class="ciimg" src="{{ url_for('static', filename='images/' + item.image) }}">
                     <div>
                         <div class="cimini">
-                            <h1>{{ item.name }}</h1>
-                            <h1>${{ item.price }}</h1>
+                            <h1 class="cin">{{ item.name }}</h1>
+                            <h1>- ${{ item.price }}</h1>
                         </div>
                         <p>{{ item.info }}</p>
                         <div class="cartbuts">
@@ -47,7 +47,7 @@
                 <div class="empty">
                     <h2>Nothing in cart</h2>
                     <a href="{{ url_for('home') }}" class="shopbutton">
-                        <button>Go To Shop</button>
+                        <button class="eb">Go To Shop</button>
                     </a>
                 </div>
             {% endif %}

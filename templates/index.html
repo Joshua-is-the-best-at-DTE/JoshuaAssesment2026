@@ -26,12 +26,16 @@
     </div>
     <div>
         <div class="filters"> <!--Filters that sort products by category-->
-            <a href="{{ url_for('home', category='all') }}"><button type="button">All</button></a>
-            <a href="{{ url_for('home', category='ball') }}"><button type="button">Balls</button></a>
-            <a href="{{ url_for('home', category='footwear') }}"><button type="button">Footwear</button></a>
-            <a href="{{ url_for('home', category='aparel') }}"><button type="button">Aparel</button></a>
-            <a href="{{ url_for('home', category='accesories') }}"><button type="button">Accessories</button></a>
-            <a href="{{ url_for('home', category='training') }}"><button type="button">Training</button></a>
+            <img class="filimg" src="static/images/filter.png">
+            <p>Filters:</p>
+            <div>
+                <a href="{{ url_for('home', category='all') }}"><button class="filbut1" type="button">‎ ‎ All‎</button></a> <!--The [U+200E] is an invisible character that I found online-->
+                <a href="{{ url_for('home', category='ball') }}"><button class="filbut" type="button">‎Balls‎</button></a>
+                <a href="{{ url_for('home', category='footwear') }}"><button class="filbut" type="button">‎Footwear‎</button></a>
+                <a href="{{ url_for('home', category='aparel') }}"><button class="filbut" type="button">‎Aparel‎</button></a>
+                <a href="{{ url_for('home', category='accesories') }}"><button class="filbut" type="button">‎Accessories‎</button></a>
+                <a href="{{ url_for('home', category='training') }}"><button class="filbut2" type="button">‎Training‎‎</button></a>
+            </div>
         </div>
         <div class="search">
             
