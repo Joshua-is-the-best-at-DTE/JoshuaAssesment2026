@@ -317,10 +317,11 @@ body {
 .cartinfo {
     border-radius: 25px;
     background: rgb(231, 231, 231);
-    height: 660px;
-    width: 525px;
+    height: 460px;
+    width: 505px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 50px;
+    padding-left: 20px;
 }
 
 .carts {
@@ -342,10 +343,6 @@ body {
 
 .cartitems {
     width: 1230px;
-}
-
-.cit {
-    margin-left: 20px;
 }
 
 .empty {
@@ -428,4 +425,59 @@ body {
     height: 25px;
     width: auto;
     margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+.paidtit {
+    margin-top: 150px;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 150px;
+}
+
+.payimg {
+    justify-self: center;
+    height: 200px;
+    width: auto;
+    margin-left: 80px;
+}
+
+.paycontent {
+    justify-self: center;
+}
+
+.paidbut {
+    margin: 10px;
+    background-color: rgb(245, 245, 245);
+    border:#862020;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    margin-left: 100px;
+}
+
+.paidbut:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.buybut {
+    margin: 10px;
+    background-color: rgb(245, 245, 245);
+    border:#862020;
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    font-size: 20px;
+}
+
+.buybut:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.paytxt {
+    width: 400px;
 }

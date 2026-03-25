@@ -77,8 +77,9 @@ def cart():
                     "info": item[3],
                     "id": item[4]
                 })
+    total_price = sum(float(item['price']) for item in products_in_cart)
 
-    return render_template("cart.html", PRODUCTS=products_in_cart)
+    return render_template("cart.html", PRODUCTS=products_in_cart, TOTAL=total_price)
 
 @app.route("/pro2")
 def pro2():
@@ -101,6 +102,9 @@ def pro(ID):
         results = cursor.fetchone()
     return render_template("productpage.html", PRODUCT=results)
 
+@app.route("/paid")
+def paid():
+    return render_template("paid.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
-

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FootballShopCart</title>
+    <title>FootballShop-Cart</title>
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
@@ -54,6 +54,23 @@
         </div>
         <div class="cartinfo">
             <h1 class="cit">Summary:</h1>
+            <div class="summary-list">
+                {% for item in PRODUCTS %}
+                <div class="summary-item">
+                    <span>{{ item.name }}</span>
+                    <span>${{ item.price }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            <p>Shipping: $0.00 (Free!)</p>
+            <h2>
+                <span>Total:</span>
+                <span>${{ TOTAL }}0</span>
+            </h2>
+            <p class="paytxt">REMINDER: You will not recieve any products and you will not actually pay for them.</p>
+            <a href="{{ url_for('paid') }}">
+                <button class="buybut">Purchase Content</button>
+            </a>
         </div>
     </div>
 
