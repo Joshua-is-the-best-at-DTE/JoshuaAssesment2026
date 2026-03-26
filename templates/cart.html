@@ -36,10 +36,16 @@
                         </div>
                         <p>{{ item.info }}</p>
                         <div class="cartbuts">
+                            <div class="quan">
+                                <a href="{{ url_for('decrease_quantity', ID=item.id) }}" class="qbut">-</a>
+                                <span class="qval">{{ item.quantity }}</span>
+                                <a href="{{ url_for('increase_quantity', ID=item.id) }}" class="qbut">+</a>
+                            </div>
                             <a href="{{ url_for('remove_from_cart', ID=item.id) }}">
                                 <button class="cartbutlast">remove</button>
                             </a>
                         </div>
+                        
                     </div>
                 </div>
                 {% endfor %}
@@ -57,7 +63,7 @@
             <div class="summary-list">
                 {% for item in PRODUCTS %}
                 <div class="summary-item">
-                    <span>{{ item.name }}</span>
+                    <span>{{ item.name }}:</span>
                     <span>${{ item.price }}</span>
                 </div>
                 {% endfor %}
@@ -65,7 +71,7 @@
             <p>Shipping: $0.00 (Free!)</p>
             <h2>
                 <span>Total:</span>
-                <span>${{ TOTAL }}0</span>
+                <span>${{ TOTAL }}</span>
             </h2>
             <p class="paytxt">REMINDER: You will not recieve any products and you will not actually pay for them.</p>
             <a href="{{ url_for('paid') }}">

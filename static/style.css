@@ -338,7 +338,7 @@ body {
 }
 
 .cartbutlast {
-    margin-left: 640px;
+    margin-left: 570px;
 }
 
 .cartitems {
@@ -480,4 +480,35 @@ body {
 
 .paytxt {
     width: 400px;
+}
+
+.quan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.qbut {
+    text-decoration: none;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    border:#862020;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    width: 50px;
+    height: 30px;
+    justify-content: center;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: black;
+}
+
+.qbut:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.qval {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
