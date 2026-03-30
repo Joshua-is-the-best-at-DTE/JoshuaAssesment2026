@@ -339,6 +339,19 @@ body {
 
 .cartbutlast {
     margin-left: 570px;
+    background-color: rgb(245, 245, 245);
+    border:#862020;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    align-items: center;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filbut:hover {
+    background-color: rgb(238, 238, 238);
 }
 
 .cartitems {
@@ -496,11 +509,12 @@ body {
     border:#862020;
     transition-property: background-color;
     transition-duration: 0.5s;
-    width: 50px;
-    height: 30px;
+    width: 30px;
+    height: 25px;
     justify-content: center;
-    padding-left: 10px;
-    padding-top: 5px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 0px;
     color: black;
 }
 
