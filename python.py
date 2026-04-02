@@ -25,7 +25,6 @@ def home():
             "price": item[4]
         })
     selected_cat = request.args.get('category', 'all').lower()
-    
     products = []
     for item in get_all_products():
         db_keywords = item[1].lower() if item[1] else ""
@@ -37,7 +36,6 @@ def home():
                 "info": item[5],
                 "price": item[4]
             })
-
     return render_template("index.html", PRODUCTS = products)
 
 @app.route("/add_to_cart/<int:ID>")
@@ -54,8 +52,6 @@ def add_to_cart(ID):
     session.modified = True
     return redirect(request.referrer or url_for('home'))
 
-
-
 @app.route("/remove_from_cart/<int:ID>")
 def remove_from_cart(ID):
     cart = session.get('cart', {})
@@ -64,7 +60,6 @@ def remove_from_cart(ID):
         cart.pop(str_id)
         session['cart'] = cart
         session.modified = True
-        
     return redirect(url_for('cart'))
 
 @app.route("/cart")
@@ -72,24 +67,20 @@ def cart():
     cart_dict = session.get('cart', {})
     products_in_cart = []
     total_price = 0
-    
     if cart_dict:
         with sqlite3.connect(database) as db:
             cursor = db.cursor()
-            # Fetch all unique products in the cart
             ids = [int(i) for i in cart_dict.keys()]
             placeholders = ','.join(['?'] * len(ids))
             query = f"SELECT Product_name, Image, Prices, Product_info, Product_ID FROM Products WHERE Product_ID IN ({placeholders})"
             cursor.execute(query, ids)
             results = cursor.fetchall()
-            
             for item in results:
                 p_id = str(item[4])
                 quantity = cart_dict[p_id]
                 price = float(item[2])
                 subtotal = price * quantity
                 total_price += subtotal
-                
                 products_in_cart.append({
                     "name": item[0],
                     "image": item[1],
@@ -99,7 +90,6 @@ def cart():
                     "subtotal": subtotal,
                     "id": item[4]
                 })
-
     return render_template("cart.html", PRODUCTS=products_in_cart, TOTAL="{:.2f}".format(total_price))
 
 @app.route("/increase_quantity/<int:ID>")
@@ -120,7 +110,6 @@ def decrease_quantity(ID):
         if cart[str_id] > 1:
             cart[str_id] -= 1
         else:
-            # If they hit 0, just remove it entirely
             cart.pop(str_id)
     session['cart'] = cart
     session.modified = True
@@ -136,7 +125,6 @@ def pro2():
             "info": item[5],
             "price": item[4]
         })
-
     return render_template("productpage.html", PRODUCTS = products)
 
 @app.route("/pro/<int:ID>")
