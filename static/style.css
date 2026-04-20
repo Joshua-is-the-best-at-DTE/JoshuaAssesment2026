@@ -526,3 +526,41 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+.thrimg {
+    height: 80px;
+    width: auto;
+}
+
+.thr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1580px;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.thrbit {
+    padding: 20px;
+}
+
+.thrbit img {
+    display: flex;
+    align-items: center;
+    margin-left: 37%;
+}
+
+.thrtit {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    justify-self: center;
+    margin-right: 40px;
+}
+
+.thrinf {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
