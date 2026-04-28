@@ -1,3 +1,13 @@
+<!--=======================================
+    Succseful purchase page for football website
+    File: paid.html
+    Author: Joshua Arada
+    Date Created: February 2026
+    Last Updated: April 2026
+    ========================================-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +17,8 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <div class="navbar"> <!-- The navbar, it is the same across all pages -->
+    <!-- The navbar, it is the same across all pages -->
+    <div class="navbar"> 
         <div class="atitle">
             <a href="{{ url_for('home') }}">
                 <img class="logo" src="../static/images/ball.png">
@@ -15,42 +26,44 @@
             </a>
         </div>
         <img class="icon" src="../static/images/bag.png">
-        <a class="shopbutton" href="{{ url_for('home') }}">Shop</a> <!-- Link to the home page with all the products -->
+        <a class="shopbutton" href="{{ url_for('home') }}">Shop</a>
         <img class="icon" src="../static/images/online-shopping.png">
-        <a class="cartbutton" href="{{ url_for('cart') }}">Cart</a> <!-- Link to the cart page -->
+        <a class="cartbutton" href="{{ url_for('cart') }}">Cart</a>
     </div>
+    <!--Succseful purchase notice-->
     <div class="paidtit">
         <h1 class="paycontent">Payment Successful</h1>
         <img class="payimg" src="static/images/check.png">
         <p class="paycontent">Thanks for shopping with us</p>
         <p class="paycontent">( Remember that you won't get any of your stuff :D )</p>
         <p class="paycontent">Don't worry, we didn't take yout money</p>
-        <a class="paycontent" href="{{ url_for('home') }}"> <!-- button that takes user to home page with all the products -->
+        <a class="paycontent" href="{{ url_for('home') }}">
             <button class="paidbut">
                 Back to Shop
             </button>
         </a>
     </div>
-    <div class="footer"> <!-- footer, it is the same across all pages -->
+    <!-- footer, it is the same across all pages -->
+    <div class="footer">
         <div class="footer1">
             <img class="footerlogo" src="../static/images/ball.png">
             <h1>FootballShop</h1>
         </div>
-        <div class="verticalline"></div> <!-- line used to divide sections of the footer -->
+        <div class="verticalline"></div>
         <div class="footer2">
-            <a href="{{ url_for('home') }}"> <!-- button that takes user to home page with all the products -->
+            <a href="{{ url_for('home') }}">
                 <button class="footbut">
                     Shop
                 </button>
             </a>
-            <a href="{{ url_for('cart') }}"> <!-- button that takes user to cart page -->
+            <a href="{{ url_for('cart') }}">
                 <button class="footbut">
                     Cart
                 </button>
             </a>
         </div>
         <div class="verticalline"></div>
-        <div class="footer3"> <!-- Just information about me because I didn't know what else to put here -->
+        <div class="footer3">
             <h2>Joshua Arada 2026</h2>
             <h2>DTE Assesment</h2>
             <h2>21005@rosmini.school.nz</h2>

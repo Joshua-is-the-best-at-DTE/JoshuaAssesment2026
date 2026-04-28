@@ -1,3 +1,13 @@
+<!--=======================================
+    Home page for football website
+    File: index.html
+    Author: Joshua Arada
+    Date Created: February 2026
+    Last Updated: April 2026
+    ========================================-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +17,8 @@
     <link rel="stylesheet" href="../static/style.css"> 
 </head>
 <body>
-    <div class="navbar"> <!-- The navbar, it is the same across all pages -->
+    <!-- The navbar, it is the same across all pages -->
+    <div class="navbar">
         <div class="atitle">
             <a href="{{ url_for('home') }}">
                 <img class="logo" src="../static/images/ball.png">
@@ -15,15 +26,17 @@
             </a>
         </div>
         <img class="icon" src="../static/images/bag.png">
-        <a class="shopbutton" href="{{ url_for('home') }}">Shop</a> <!-- Link to the home page with all the products -->
+        <a class="shopbutton" href="{{ url_for('home') }}">Shop</a>
         <img class="icon" src="../static/images/online-shopping.png">
-        <a class="cartbutton" href="{{ url_for('cart') }}">Cart</a> <!-- Link to the cart page -->
+        <a class="cartbutton" href="{{ url_for('cart') }}">Cart</a>
     </div>
+    <!--Site title-->
     <div class="title">
         <h1 class="titleinfo">Premium Football Equipment</h1>
-        <p class="titleinfo"> <!-- I used ai to write this paragraph introducing the website -->
-            Football Shop is your direct line to the beautiful game, offering a curated selection of elite boots, authentic kits, and pro-grade gear. Built for players and fans alike, we combine top-tier quality with fast delivery to keep you ahead of the competition. From the local park to the big stadium, if it’s football, it’s here.</p>
+        <p class="titleinfo">
+            Football shop is a self run store of all footballing essentials. Looking to level up your game or get started in the sport? we can help with that. We have everything football from boots, to balls, to training gear, we have it all. We hope you have a satisfactory experience shopping with us.</p>
     </div>
+    <!--Simple design addition-->
     <div class="thr">
         <div class="thrbit">
             <img class="thrimg" src="static/images/soccer-ball.png">
@@ -42,7 +55,8 @@
         </div>
     </div>
     <div>
-        <div class="filters"> <!--Filters that sort products by category-->
+        <!--Filters that sort products by category-->
+        <div class="filters">
             <img class="filimg" src="static/images/filter.png">
             <p>Filters:</p>
             <div>
@@ -54,12 +68,10 @@
                 <a href="{{ url_for('home', category='training') }}"><button class="filbut2" type="button">‎Training‎‎</button></a>
             </div>
         </div>
-        <div class="search">
-            
-        </div>
     </div>
+    <!--Products loop-->
     <div class="products">
-        {% for item in PRODUCTS %} <!-- A loop that contueoslly puts every product and its name, img, price, and info, from the python on to the website. (The python gets the products from my database) -->
+        {% for item in PRODUCTS %}
             <div class="product">
                 <a href="{{ url_for('pro', ID=item.id) }}">
                     <img class="productimg" src="{{url_for('static', filename='images/' + item.image)}}" alt="">
@@ -71,26 +83,27 @@
             {% endfor %}
         </div>
     </div>
-    <div class="footer"> <!-- footer, it is the same across all pages -->
+    <!-- footer, it is the same across all pages -->
+    <div class="footer">
         <div class="footer1">
             <img class="footerlogo" src="../static/images/ball.png">
             <h1>FootballShop</h1>
         </div>
-        <div class="verticalline"></div> <!-- line used to divide sections of the footer -->
+        <div class="verticalline"></div>
         <div class="footer2">
-            <a href="{{ url_for('home') }}"> <!-- button that takes user to home page with all the products -->
+            <a href="{{ url_for('home') }}">
                 <button class="footbut">
                     Shop
                 </button>
             </a>
-            <a href="{{ url_for('cart') }}"> <!-- button that takes user to cart page -->
+            <a href="{{ url_for('cart') }}">
                 <button class="footbut">
                     Cart
                 </button>
             </a>
         </div>
         <div class="verticalline"></div>
-        <div class="footer3"> <!-- Just information about me because I didn't know what else to put here -->
+        <div class="footer3">
             <h2>Joshua Arada 2026</h2>
             <h2>DTE Assesment</h2>
             <h2>21005@rosmini.school.nz</h2>
