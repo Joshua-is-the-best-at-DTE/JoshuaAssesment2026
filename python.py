@@ -3,7 +3,7 @@ import sqlite3
 
 database = 'Databases/products.db'
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'
+app.secret_key = 'joshua'
 
 def get_all_products():
     with sqlite3.connect(database) as db:
@@ -114,18 +114,6 @@ def decrease_quantity(ID):
     session['cart'] = cart
     session.modified = True
     return redirect(url_for('cart'))
-
-@app.route("/pro2")
-def pro2():
-    products = []
-    for item in get_all_products():
-        products.append({
-            "name": item[0],
-            "image": item[3],
-            "info": item[5],
-            "price": item[4]
-        })
-    return render_template("productpage.html", PRODUCTS = products)
 
 @app.route("/pro/<int:ID>")
 def pro(ID):
