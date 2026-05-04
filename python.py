@@ -3,7 +3,7 @@ import sqlite3
 
 database = 'Databases/products.db'
 app = Flask(__name__)
-app.secret_key = 'joshua'
+app.secret_key = 'joshua_is_better_than_carter_at_DTE'
 
 def get_all_products():
     with sqlite3.connect(database) as db:
